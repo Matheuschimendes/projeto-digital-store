@@ -5,7 +5,7 @@ import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/instagram.svg";
 import twitter from "../../assets/twitter.svg";
 import Logo from "../Logo/page";
-import FooterInformations from "./footerInFormations";
+import FooterInformations from "./FooterInFormations";
 
 const informationLinks = [
   { text: "Sobre Drip Store", link: "/about" },
