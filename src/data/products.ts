@@ -5,6 +5,8 @@ export type Product = {
   price: number;
   priceDiscount?: number;
   category?: string;
+  brand?: string;
+  gender?: string;
 };
 
 export const products: Product[] = [
@@ -15,6 +17,8 @@ export const products: Product[] = [
     price: 200,
     priceDiscount: 149.9,
     category: "Tênis",
+    brand: "K-Swiss",
+    gender: "Masculino",
   },
   {
     id: 2,
@@ -23,6 +27,8 @@ export const products: Product[] = [
     price: 249.9,
     priceDiscount: 199.9,
     category: "Tênis",
+    brand: "Nike",
+    gender: "Masculino",
   },
   {
     id: 3,
@@ -30,6 +36,8 @@ export const products: Product[] = [
     image: "/product-thumb-3.jpeg",
     price: 179.9,
     category: "Tênis",
+    brand: "Adidas",
+    gender: "Feminino",
   },
   {
     id: 4,
@@ -38,6 +46,8 @@ export const products: Product[] = [
     price: 299.9,
     priceDiscount: 239.9,
     category: "Tênis",
+    brand: "Puma",
+    gender: "Masculino",
   },
   {
     id: 5,
@@ -45,6 +55,8 @@ export const products: Product[] = [
     image: "/product-thumb-5.jpeg",
     price: 159.9,
     category: "Tênis",
+    brand: "K-Swiss",
+    gender: "Unissex",
   },
   {
     id: 6,
@@ -53,6 +65,8 @@ export const products: Product[] = [
     price: 320,
     priceDiscount: 279.9,
     category: "Tênis",
+    brand: "Adidas",
+    gender: "Masculino",
   },
   {
     id: 7,
@@ -60,6 +74,8 @@ export const products: Product[] = [
     image: "/product-thumb-2.jpeg",
     price: 190,
     category: "Tênis",
+    brand: "Nike",
+    gender: "Feminino",
   },
   {
     id: 8,
@@ -68,5 +84,7 @@ export const products: Product[] = [
     price: 260,
     priceDiscount: 219.9,
     category: "Tênis",
+    brand: "Puma",
+    gender: "Unissex",
   },
 ];
