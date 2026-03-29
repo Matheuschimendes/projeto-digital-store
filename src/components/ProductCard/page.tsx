@@ -22,7 +22,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           />
         </div>
 
-        <div className="pt-4">
+        <div className="pt-4 m-4">
           <span className="text-xs font-semibold text-[var(--light-gray)]">
             {product.category || "Tênis"}
           </span>

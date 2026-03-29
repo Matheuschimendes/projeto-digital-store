@@ -7,6 +7,13 @@ export type Product = {
   category?: string;
   brand?: string;
   gender?: string;
+  reference?: string;
+  stars?: number;
+  rating?: number;
+  description?: string;
+  sizes?: string[];
+  colors?: string[];
+  gallery?: { src: string }[];
 };
 
 export const products: Product[] = [
@@ -19,6 +26,19 @@ export const products: Product[] = [
     category: "Tênis",
     brand: "K-Swiss",
     gender: "Masculino",
+    reference: "REF123456",
+    stars: 4.7,
+    rating: 90,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    sizes: ["39", "40", "41", "42", "43"],
+    colors: ["#6FEEFF", "#FF6969", "#5E5E5E", "#6D70B7"],
+    gallery: [
+      { src: "/product-image-1.jpeg" },
+      { src: "/product-image-2.jpeg" },
+      { src: "/product-image-3.jpeg" },
+      { src: "/product-image-4.jpeg" },
+    ],
   },
   {
     id: 2,
@@ -29,6 +49,19 @@ export const products: Product[] = [
     category: "Tênis",
     brand: "Nike",
     gender: "Masculino",
+    reference: "REF654321",
+    stars: 4.5,
+    rating: 75,
+    description:
+      "Modelo esportivo com excelente conforto, ideal para o dia a dia e atividades leves.",
+    sizes: ["38", "39", "40", "41", "42"],
+    colors: ["#000000", "#FFFFFF", "#C92071"],
+    gallery: [
+      { src: "/product-image-1.jpeg" },
+      { src: "/product-image-2.jpeg" },
+      { src: "/product-image-3.jpeg" },
+      { src: "/product-image-4.jpeg" },
+    ],
   },
   {
     id: 3,
@@ -38,6 +71,19 @@ export const products: Product[] = [
     category: "Tênis",
     brand: "Adidas",
     gender: "Feminino",
+    reference: "REF111222",
+    stars: 4.2,
+    rating: 61,
+    description:
+      "Tênis leve e confortável para corridas leves e caminhadas.",
+    sizes: ["36", "37", "38", "39"],
+    colors: ["#B5B6F2", "#EE4266", "#1F1F1F"],
+    gallery: [
+      { src: "/product-image-1.jpeg" },
+      { src: "/product-image-2.jpeg" },
+      { src: "/product-image-3.jpeg" },
+      { src: "/product-image-4.jpeg" },
+    ],
   },
   {
     id: 4,
@@ -48,6 +94,19 @@ export const products: Product[] = [
     category: "Tênis",
     brand: "Puma",
     gender: "Masculino",
+    reference: "REF333444",
+    stars: 4.8,
+    rating: 110,
+    description:
+      "Design urbano com visual moderno e acabamento premium.",
+    sizes: ["39", "40", "41", "42"],
+    colors: ["#F6AA1C", "#1F1F1F", "#FFFFFF"],
+    gallery: [
+      { src: "/product-image-1.jpeg" },
+      { src: "/product-image-2.jpeg" },
+      { src: "/product-image-3.jpeg" },
+      { src: "/product-image-4.jpeg" },
+    ],
   },
   {
     id: 5,
@@ -57,6 +116,19 @@ export const products: Product[] = [
     category: "Tênis",
     brand: "K-Swiss",
     gender: "Unissex",
+    reference: "REF555666",
+    stars: 4.0,
+    rating: 45,
+    description:
+      "Modelo casual e versátil para combinar com diferentes estilos.",
+    sizes: ["37", "38", "39", "40", "41"],
+    colors: ["#474747", "#CCCCCC", "#C92071"],
+    gallery: [
+      { src: "/product-image-1.jpeg" },
+      { src: "/product-image-2.jpeg" },
+      { src: "/product-image-3.jpeg" },
+      { src: "/product-image-4.jpeg" },
+    ],
   },
   {
     id: 6,
