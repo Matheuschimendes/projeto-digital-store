@@ -15,7 +15,7 @@ export default function ProductViewPage() {
   if (!product) {
     return (
       <Layout>
-        <div className="mx-auto max-w-[1440px] px-6 py-16">
+        <div className="mx-auto max-w-[1440px] px-4 py-16 md:px-6">
           <p className="text-lg text-[var(--dark-gray-2)]">
             Produto não encontrado.
           </p>
@@ -24,17 +24,19 @@ export default function ProductViewPage() {
     );
   }
 
-  const recommendedProducts = products.filter((item) => item.id !== product.id).slice(0, 4);
+  const recommendedProducts = products
+    .filter((item) => item.id !== product.id)
+    .slice(0, 4);
 
   return (
     <Layout>
       <div className="bg-[var(--light-gray-3)]">
-        <div className="mx-auto max-w-[1440px] px-6 py-10">
-          <div className="grid gap-10 lg:grid-cols-[700px_1fr]">
+        <div className="mx-auto max-w-[1440px] px-4 py-8 md:px-6 md:py-10">
+          <div className="grid gap-8 xl:grid-cols-[700px_1fr] xl:gap-10">
             <Gallery
               images={product.gallery ?? [{ src: product.image }]}
               width="100%"
-              height="570px"
+              height="clamp(320px, 55vw, 570px)"
               radius="4px"
               showThumbs
             />
@@ -77,7 +79,7 @@ export default function ProductViewPage() {
             </BuyBox>
           </div>
 
-          <div className="mt-20">
+          <div className="mt-16 md:mt-20">
             <Section
               title="Produtos recomendados"
               titleAlign="left"

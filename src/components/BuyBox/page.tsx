@@ -12,6 +12,13 @@ type BuyBoxProps = {
   children?: ReactNode;
 };
 
+function formatPrice(value: number) {
+  return value.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
+}
+
 export default function BuyBox({
   name,
   reference,
@@ -26,7 +33,7 @@ export default function BuyBox({
 
   return (
     <div className="w-full max-w-[440px]">
-      <h1 className="text-[32px] font-bold leading-10 text-[var(--dark-gray)]">
+      <h1 className="text-[28px] font-bold leading-9 text-[var(--dark-gray)] md:text-[32px] md:leading-10">
         {name}
       </h1>
 
@@ -36,7 +43,7 @@ export default function BuyBox({
         </p>
       ) : null}
 
-      <div className="mt-4 flex items-center gap-3">
+      <div className="mt-4 flex flex-wrap items-center gap-3">
         {typeof stars === "number" ? (
           <div className="flex items-center gap-1 rounded bg-[var(--warning)] px-2 py-1 text-sm font-bold text-white">
             <span>{stars}</span>
@@ -51,19 +58,19 @@ export default function BuyBox({
         ) : null}
       </div>
 
-      <div className="mt-6 flex items-center gap-3">
+      <div className="mt-6 flex flex-wrap items-center gap-3">
         {hasDiscount ? (
           <>
-            <span className="text-[32px] font-bold text-[var(--dark-gray-2)]">
-              R$ {priceDiscount!.toFixed(2)}
+            <span className="text-[28px] font-bold text-[var(--dark-gray-2)] md:text-[32px]">
+              {formatPrice(priceDiscount!)}
             </span>
             <span className="text-base text-[var(--light-gray-2)] line-through">
-              R$ {price.toFixed(2)}
+              {formatPrice(price)}
             </span>
           </>
         ) : (
-          <span className="text-[32px] font-bold text-[var(--dark-gray-2)]">
-            R$ {price.toFixed(2)}
+          <span className="text-[28px] font-bold text-[var(--dark-gray-2)] md:text-[32px]">
+            {formatPrice(price)}
           </span>
         )}
       </div>

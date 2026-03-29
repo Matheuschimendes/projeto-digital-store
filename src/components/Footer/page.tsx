@@ -1,10 +1,7 @@
-
-
-
+import Logo from "../Logo/page";
 import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/instagram.svg";
 import twitter from "../../assets/twitter.svg";
-import Logo from "../Logo/page";
 import FooterInformations from "./FooterInFormations";
 
 const informationLinks = [
@@ -25,15 +22,18 @@ const categoryLinks = [
 ];
 
 const contactLinks = [
-  { text: "Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161", link: "#" },
+  {
+    text: "Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161",
+    link: "#",
+  },
   { text: "(85) 3051-3411", link: "tel:+558530513411" },
 ];
 
 export default function Footer() {
   return (
     <footer className="mt-16 bg-[var(--dark-gray)] text-white">
-      <div className="mx-auto max-w-[1440px] px-6 py-18">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <div className="mx-auto max-w-[1440px] px-4 py-12 md:px-6 md:py-16">
+        <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Logo isFooter />
 
