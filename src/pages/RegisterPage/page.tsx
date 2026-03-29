@@ -3,7 +3,7 @@ import Layout from "../Layout";
 export default function RegisterPage() {
   return (
     <Layout>
-      <div className="mx-auto max-w-[1440px] px-6 py-16">
+      <div className="mx-auto max-w-[1440px] px-4 py-16 md:px-6">
         <h1 className="text-2xl font-bold text-[var(--dark-gray-2)]">
           Cadastro
         </h1>

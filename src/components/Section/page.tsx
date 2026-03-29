@@ -10,6 +10,7 @@ type SectionProps = {
   title: string;
   titleAlign?: "left" | "center";
   link?: SectionLink;
+  titleClassName?: string;
   children: ReactNode;
 };
 
@@ -17,6 +18,7 @@ export default function Section({
   title,
   titleAlign = "left",
   link,
+  titleClassName,
   children,
 }: SectionProps) {
   const isCenter = titleAlign === "center";
@@ -31,7 +33,7 @@ export default function Section({
         <h2
           className={`text-2xl font-bold text-[var(--dark-gray-2)] ${
             isCenter ? "text-center" : "text-left"
-          }`}
+          } ${titleClassName || ""}`}
         >
           {title}
         </h2>

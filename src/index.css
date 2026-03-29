@@ -13,7 +13,7 @@
   --dark-gray-3: #666666;
   --light-gray: #8F8F8F;
   --light-gray-2: #CCCCCC;
-  --light-gray-3: #F5F5F5;
+  --light-gray-3: #F6F6F8;
   --white: #FFFFFF;
 }
 
@@ -23,7 +23,9 @@
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   background: var(--white);
   color: var(--dark-gray);
+  line-height: 1.6;
+  overflow-x: hidden;
 }

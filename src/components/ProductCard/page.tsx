@@ -21,7 +21,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       className="group block w-full max-w-[292px]"
     >
       <div className="rounded bg-white">
-        <div className="relative flex h-[321px] items-center justify-center overflow-hidden rounded bg-[var(--light-gray-3)] p-4">
+        <div className="relative flex h-[280px] items-center justify-center overflow-hidden rounded bg-[var(--light-gray-3)] p-4">
           {hasDiscount ? (
             <span className="absolute left-3 top-3 rounded-full bg-[#E7FF86] px-3 py-1 text-xs font-bold text-[var(--dark-gray-2)]">
               30% OFF
@@ -40,7 +40,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             {product.category || "Tênis"}
           </span>
 
-          <h3 className="mt-2 min-h-[64px] text-2xl font-normal leading-8 text-[var(--dark-gray-2)]">
+          <h3 className="mt-2 min-h-[56px] text-lg font-semibold leading-7 text-[var(--dark-gray-2)]">
             {product.name}
           </h3>
 
@@ -48,15 +48,15 @@ export default function ProductCard({ product }: ProductCardProps) {
             <span
               className={`text-2xl ${
                 hasDiscount
-                  ? "text-[var(--light-gray)] line-through"
-                  : "font-bold text-[var(--dark-gray)]"
+                  ? "text-base font-semibold text-[var(--light-gray)] line-through"
+                  : "text-xl font-bold text-[var(--dark-gray)]"
               }`}
             >
               {formatPrice(product.price)}
             </span>
 
             {hasDiscount ? (
-              <span className="text-2xl font-bold text-[var(--dark-gray)]">
+              <span className="text-xl font-bold text-[var(--dark-gray)]">
                 {formatPrice(product.priceDiscount!)}
               </span>
             ) : null}

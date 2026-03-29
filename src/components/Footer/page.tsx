@@ -32,7 +32,7 @@ const contactLinks = [
 export default function Footer() {
   return (
     <footer className="mt-16 bg-[var(--dark-gray)] text-white">
-      <div className="mx-auto max-w-[1440px] px-4 py-12 md:px-6 md:py-16">
+      <div className="mx-auto max-w-[1240px] px-4 py-12 md:px-6 md:py-16">
         <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Logo isFooter />
