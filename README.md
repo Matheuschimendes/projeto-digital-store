@@ -1,73 +1,145 @@
-# React + TypeScript + Vite
+# 🛍️ Digital Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido como desafio final de Front-end da Digital College.
 
-Currently, two official plugins are available:
+A proposta foi construir uma aplicação web de e-commerce utilizando React, aplicando conceitos de componentização, rotas e boas práticas de organização de código.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Sobre o projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A Digital Store é uma loja virtual onde o usuário pode:
 
-## Expanding the ESLint configuration
+* navegar pelos produtos
+* buscar itens pelo nome
+* visualizar detalhes de um produto
+* explorar categorias (estrutura preparada)
+* simular uma experiência de compra
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O layout foi baseado no design disponibilizado no Figma do desafio.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🧩 Funcionalidades
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Página inicial com banner e produtos em destaque
+* Listagem de produtos com busca e ordenação
+* Página de detalhes do produto
+* Navegação entre páginas com React Router
+* Componentes reutilizáveis
+* Layout responsivo (mobile + desktop)
+
+---
+
+## 🗂️ Estrutura do projeto
+
+O projeto foi organizado separando componentes reutilizáveis das páginas:
+
+```bash
+src/
+  components/
+    Header/
+    Footer/
+    Logo/
+    Gallery/
+    Section/
+    ProductCard/
+    ProductListing/
+    ProductOptions/
+    BuyBox/
+    FilterGroup/
+  pages/
+    Layout/
+    HomePage/
+    ProductListingPage/
+    ProductViewPage/
+    CategoriesPage/
+    MyOrdersPage/
+    LoginPage/
+    RegisterPage/
+  data/
+    products.ts
+  routes/
+    index.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tecnologias utilizadas
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* React
+* TypeScript
+* Vite
+* React Router DOM
+* Tailwind CSS
+
+---
+
+## ▶️ Como rodar o projeto
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/SEU-USUARIO/projeto-digital-store.git
 ```
+
+Entre na pasta:
+
+```bash
+cd projeto-digital-store
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Rode o projeto:
+
+```bash
+npm run dev
+```
+
+Acesse no navegador:
+
+```bash
+http://localhost:5173
+```
+
+---
+
+## 📦 Build
+
+Para gerar a versão de produção:
+
+```bash
+npm run build
+```
+
+---
+
+## 🌐 Deploy
+
+O projeto foi publicado na Vercel:
+
+👉 https://seu-projeto.vercel.app
+
+---
+
+## 👨‍💻 Autor
+
+* Matheus Chimendes
+
+---
+
+## 📌 Observações
+
+Esse projeto foi desenvolvido com foco em aprendizado e prática de:
+
+* React
+* organização de componentes
+* construção de interfaces
+* navegação entre páginas
+
+Algumas funcionalidades (como filtros avançados e carrinho) foram mantidas apenas visuais conforme proposta do desafio.
