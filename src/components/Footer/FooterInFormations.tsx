@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 type InformationItem = {
   text: string;
   link: string;
@@ -21,12 +19,12 @@ export default function FooterInformations({
       <ul className="space-y-4">
         {informations.map((item) => (
           <li key={`${item.text}-${item.link}`}>
-            <Link
-              to={item.link}
+            <a
+              href={item.link}
               className="text-sm text-white transition hover:opacity-80"
             >
               {item.text}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>

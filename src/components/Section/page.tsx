@@ -24,7 +24,7 @@ export default function Section({
   return (
     <section className="w-full">
       <div
-        className={`mb-5 flex items-center ${
+        className={`mb-8 flex items-center ${
           isCenter ? "justify-center" : "justify-between"
         }`}
       >
@@ -39,14 +39,14 @@ export default function Section({
         {!isCenter && link ? (
           <Link
             to={link.href}
-            className="text-lg font-medium text-[var(--primary)] hover:opacity-80"
+            className="text-lg font-medium text-[var(--primary)] transition hover:opacity-80"
           >
             {link.text}
           </Link>
         ) : null}
       </div>
 
-      <div>{children}</div>
+      {children}
     </section>
   );
 }
